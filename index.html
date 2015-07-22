@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Dklib : Cross-Platform Game Engine for C++, Python">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Dklib</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/tiff2766/DKLib">View on GitHub</a>
+
+          <h1 id="project_title">Dklib</h1>
+          <h2 id="project_tagline">Cross-Platform Game Engine for C++, Python</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/tiff2766/DKLib/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/tiff2766/DKLib/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="project-dk-dklib" class="anchor" href="#project-dk-dklib" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project DK, DKLib</h1>
+
+<p>Game Library for C++ and Python<br>
+This project contains two modules, DK and PyDK.<br>
+DK is core library for C++ and PyDK is Python bindings for DK.</p>
+
+<h1>
+<a id="dk-core-library" class="anchor" href="#dk-core-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>DK (Core Library)</h1>
+
+<p>A Lightweighted cross-platform Game Library.<br>
+This is low level game library written with C++ and supports full multi-threaded, 64-bits environments.
+You can use Python-script to improve productivity.</p>
+
+<p>DK library has following contents with two frameworks layer.</p>
+
+<h5>
+<a id="dkfoundation---foundation-classes-managing-system-tasks" class="anchor" href="#dkfoundation---foundation-classes-managing-system-tasks" aria-hidden="true"><span class="octicon octicon-link"></span></a>DKFoundation - <code>Foundation Classes, Managing System Tasks.</code>
+</h5>
+
+<ul>
+<li>C++ Metaprograms (Type Libraries, etc.)</li>
+<li>Data Collections (Array, Map, Tuples, etc.)</li>
+<li>Object Management (SmartPointers, WeakRef, Allocators, etc.)</li>
+<li>Thread and Synchronize objects (Mutex, Condition, Atomics, etc.)</li>
+<li>Thread Pool for Asynchronous Operations</li>
+<li>High Resolution Timer</li>
+<li>Run-Loop System</li>
+<li>Function Interface for Operations, Invocations, Functors</li>
+<li>Data and Buffer objects</li>
+<li>Rational for High-Precision Calculation</li>
+<li>Unicode String (UTF-8,16,32)</li>
+<li>File, Directory and Stream (including File-Mapping)</li>
+<li>Date Time class (ISO-8601 support)</li>
+<li>Endianness Byte Order Utilities</li>
+<li>Logging Interface</li>
+<li>Error Handler (with Stack-Tracer)</li>
+<li>XMLParser (DOM, SAX)</li>
+<li>Hash Library (SHA1, SHA2, etc.)</li>
+<li>Zip Archiver, Unarchiver</li>
+</ul>
+
+<h5>
+<a id="dkframework---game-framework-for-application" class="anchor" href="#dkframework---game-framework-for-application" aria-hidden="true"><span class="octicon octicon-link"></span></a>DKFramework - <code>Game Framework for Application</code>
+</h5>
+
+<ul>
+<li>Application Entry Point</li>
+<li>Collision Detection Utilities</li>
+<li>Convex Decomposition</li>
+<li>Physics Constraints</li>
+<li>Dynamics Simulator</li>
+<li>Node Based Scene Graph Management</li>
+<li>Curve Interpolation (Spline, B-Spline, Bezier, etc.)</li>
+<li>Data Marshalling</li>
+<li>Animation (able to Retargeting, Blending)</li>
+<li>Text Font (TTF, PS, etc.)</li>
+<li>3D Audio</li>
+<li>Mathematics (Matrices, Vectors, Quaternion, etc.)</li>
+<li>OpenGL Context Interface (OpenGL/OpenGL ES)</li>
+<li>Resource Management</li>
+<li>Material and Shader Management</li>
+<li>Window, Screen Management</li>
+<li>Voxel, Storage, Polygonizer Interfaces</li>
+</ul>
+
+<p>Each framework designed for modular, cross-platform.<br>
+You can use any classes without any dependencies.
+You are also able to use single project for multiple-platforms without
+any modifictations that platform dependent.</p>
+
+<p>You can use DK with other UI Tools also. (MFC, Cocoa, wxWidgets, etc.)</p>
+
+<h3>
+<a id="running-platforms" class="anchor" href="#running-platforms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running platforms.</h3>
+
+<ul>
+<li>Windows Vista or later.</li>
+<li>Mac OS X 10.9 or later.</li>
+<li>iOS 7.0 or later. (for OpenGL ES 3.0)</li>
+<li>
+<del>Android 4.3 or later</del> (Not yet, I'm working)
+
+<ul>
+<li>JNI birdge required (I'll merge project as soon as possible.)</li>
+</ul>
+</li>
+</ul>
+
+<p>For other platforms including linux or android, You can implement
+DK interfaces to use DK library with other GUI OSes.</p>
+
+<blockquote>
+<p>See interface header files in <code>DKFramework/Interface</code>.<br>
+You can see implementations for other OSes in <code>DKFramework/Private</code></p>
+</blockquote>
+
+<h2>
+<a id="build-environments" class="anchor" href="#build-environments" aria-hidden="true"><span class="octicon octicon-link"></span></a>Build Environments</h2>
+
+<ul>
+<li>Visual Studio 2015 for Windows</li>
+<li>Xcode6 for Mac, iOS</li>
+<li>C++11 compiler</li>
+</ul>
+
+<h1>
+<a id="pydk" class="anchor" href="#pydk" aria-hidden="true"><span class="octicon octicon-link"></span></a>PyDK</h1>
+
+<p>Python bindings for DK. (Python 3.4 or later).<br>
+You can build PyDK with or without python interpreter embedded.</p>
+
+<h3>
+<a id="dk-scripts" class="anchor" href="#dk-scripts" aria-hidden="true"><span class="octicon octicon-link"></span></a>DK Scripts</h3>
+
+<ul>
+<li>Deferred Rendering System.</li>
+<li>Game Physics &amp; Collision Library</li>
+<li>Useful Game Libraries</li>
+<li>Extensible UI</li>
+<li>Scene Editor</li>
+</ul>
+
+<h3>
+<a id="build-pydk" class="anchor" href="#build-pydk" aria-hidden="true"><span class="octicon octicon-link"></span></a>Build PyDK</h3>
+
+<h6>
+<a id="you-need-python-library-to-build-pydk-with-python-interpreter-embedded" class="anchor" href="#you-need-python-library-to-build-pydk-with-python-interpreter-embedded" aria-hidden="true"><span class="octicon octicon-link"></span></a>You need python library to build PyDK with python interpreter embedded.</h6>
+
+<ol>
+<li>Download prebuilt library for your platform.
+
+<ul>
+<li>Win32 i386
+
+<ul>
+<li><a href="https://github.com/tiff2766/Python/releases/download/v3.4.3/python3.4.3_Win32.zip">python3.4.3_Win32.zip</a></li>
+</ul>
+</li>
+<li>Win32 x64
+
+<ul>
+<li><a href="https://github.com/tiff2766/Python/releases/download/v3.4.3/python3.4.3_Win32_x64.zip">python3.4.3_Win32_x64.zip</a></li>
+</ul>
+</li>
+<li>Mac OS X (Universal)
+
+<ul>
+<li><a href="https://github.com/tiff2766/Python/releases/download/v3.4.3/python3.4.3_OSX.zip">python3.4.3_OSX.zip</a></li>
+</ul>
+</li>
+<li>Apple iOS (Universal)
+
+<ul>
+<li><a href="https://github.com/tiff2766/Python/releases/download/v3.4.3/python3.4.3_iOS.zip">python3.4.3_iOS.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Extract into PyDK/Python/<br>
+<code>example for OSX: PyDK/Python/OSX/libpython3.4.a</code>
+</li>
+<li><p>Build!</p></li>
+</ol>
+
+<ul>
+<li>Or you can build from sources on GitHub
+
+<ul>
+<li><a href="https://github.com/tiff2766/Python">https://github.com/tiff2766/Python</a></li>
+</ul>
+</li>
+</ul>
+
+<h5>
+<a id="pre-built-module-for-python34-download" class="anchor" href="#pre-built-module-for-python34-download" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pre-built module for python3.4 download:</h5>
+
+<p>With this python module, you can write your codes with your favorite editors and system installed python.</p>
+
+<p>Extract file into your Python site-packages dir.</p>
+
+<ul>
+<li><a href="https://bitbucket.org/tiff2766/dkdemo/downloads/dk_core_python34_module_osx.zip">Mac OS X</a></li>
+<li><a href="https://bitbucket.org/tiff2766/dkdemo/downloads/dk_core_python34_module_win32.zip">Windows i386</a></li>
+<li><a href="https://bitbucket.org/tiff2766/dkdemo/downloads/dk_core_python34_module_win32_x64.zip">Windows x64</a></li>
+<li>It is strongly recommend to use dk module together. You can download dk module in this project. <code>Scripts/dk</code>
+</li>
+</ul>
+
+<h2>
+<a id="required-libraries-included-in-this-project" class="anchor" href="#required-libraries-included-in-this-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Required Libraries (Included in this project)</h2>
+
+<ul>
+<li>OpenAL-soft-1.15.1
+
+<ul>
+<li>This is LGPL licensed, configured to build <strong>dynamic-library</strong>.</li>
+<li>Win32, Android only.</li>
+<li>Mac OS X, iOS use Apple's OpenAL framework.</li>
+</ul>
+</li>
+<li>BulletPhysics-2.82 (svn rev: 2719)</li>
+<li>CxImage-7.02</li>
+<li>FreeType-2.5.3</li>
+<li>bzip2-1.0.6</li>
+<li>jpeg-9</li>
+<li>libFLAC-1.2.1</li>
+<li>libogg-1.3.1</li>
+<li>libpng-1.5.10</li>
+<li>libtiff-4.0.3</li>
+<li>libvorbis-1.3.3</li>
+<li>libxml2-2.9.0</li>
+<li>sqlite-3.7.15.2</li>
+<li>zlib-1.2.7</li>
+</ul>
+
+<h2>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h2>
+
+<p>Hongtae Kim, (<a href="mailto:tiff2766@gmail.com">tiff2766@gmail.com</a>)  </p>
+
+<h2>
+<a id="liense" class="anchor" href="#liense" aria-hidden="true"><span class="octicon octicon-link"></span></a>Liense</h2>
+
+<p><a href="http://opensource.org/licenses/MIT">MIT License</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Dklib maintained by <a href="https://github.com/tiff2766">tiff2766</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
